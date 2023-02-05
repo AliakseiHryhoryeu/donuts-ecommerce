@@ -1,8 +1,109 @@
 //====================================================================================================
-.page {
-	max-height: 910px;
-	background-image: url('@img/bg.jpg');
-	background-repeat: no-repeat;
-	background-size: cover;
+.preview {
+	&__fullContainer {
+		min-height: 910px;
+		background-image: url('@img/bg.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: flex-end;
+	}
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+	}
+	&__container {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: flex-end;
+		height: 100%;
+		width: 100%;
+	}
+	&__title {
+		font-weight: 900;
+		font-size: rem(72);
+		text-transform: uppercase;
+		text-align: center;
+		span {
+			color: rgba(255, 114, 151, 1);
+		}
+	}
+	&__subtitle {
+		font-size: rem(36);
+		font-weight: 500;
+		text-align: center;
+		padding-top: 20px;
+		padding-bottom: 30px;
+		line-height: rem(34px);
+	}
+	&__button {
+		padding: 21px 50px;
+		text-transform: uppercase;
+		cursor: pointer;
+		text-align: center;
+		border-radius: 25px;
+		color: #fff;
+		background-color: rgba(255, 114, 151, 1);
+		border: 1px solid #fff;
+		// max-width: 360px;
+		font-style: 24px;
+		font-weight: 600;
+	}
 }
-//====================================================================================================
+
+.arrange__container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-transform: uppercase;
+	padding: 150px 0px;
+	font-weight: 700;
+	font-size: 72px;
+	text-align: center;
+	span {
+		color: rgba(255, 114, 151, 1);
+	}
+}
+.team {
+	&__fullContainer {
+		position: relative;
+		min-height: 1050px;
+		width: 100%;
+	}
+	&__bg {
+		&-top {
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+		&-bottom {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+		}
+	}
+	&__spacer {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		padding: 10px 0px;
+		border: 2px solid rgba(255, 114, 151, 1);
+		p {
+			white-space: nowrap;
+			margin: 0px 100px;
+			font-weight: 900;
+			font-size: 96px;
+			text-transform: uppercase;
+			color: transparent;
+			-webkit-text-stroke: 3px rgba(255, 114, 151, 1);
+		}
+	}
+}

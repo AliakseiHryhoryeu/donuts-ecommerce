@@ -5,14 +5,80 @@
 		<div class="wrapper">
 			@@include('html/_header.htm',{})
 			<main class="page">
-				<div class="page__container">
-					<div class="main__title">Find your favorite <span>donut</span>!</div>
-					<div class="main__subtitle">
-						Our bakery offers various options of donuts
+				<div class="preview__fullContainer">
+					<div class="preview__container">
+						<div class="preview__wrapper">
+							<div class="preview__title">
+								Find your <br />
+								favorite <span>donut</span>!
+							</div>
+							<div class="preview__subtitle">
+								Our bakery offers various <br />
+								options of donuts
+							</div>
+							<div class="preview__button">CHOOSE DONUTS</div>
+						</div>
 					</div>
-					<div class="main__button">CHOOSE DONUTS</div>
+				</div>
+				<div class="arrange__container">
+					<p>
+						Arrange a <span>sweet life</span>
+						<br />
+						for yourself
+					</p>
+				</div>
+				<div class="team__spacer">
+					<p>our team</p>
+					<p>our team</p>
+					<p>our team</p>
+					<p>our team</p>
+					<p>our team</p>
+				</div>
+				<div class="team__fullContainer">
+					<div class="team__container">
+						<div class="team__wrapper">
+							<div class="team__title">The «Doughnuts» team</div>
+							<div class="team__text">
+								<p>
+									We use the freshest products, free shipping and the best
+									service! We want every customer to be satisfied and contact us
+									again. After all, we work every day to make your meal
+									delicious!
+								</p>
+								<p>
+									The «Doughnuts» team has been on the market for about one
+									year. During this time, each of us has improved our culinary
+									skills, found friends and even fell in love.
+								</p>
+								<p>
+									Teamwork makes everyone more open and tolerant, teaches how to
+									interact with other people, establish connections and
+									collaborate effectively. Our team is attentive to everyone.
+								</p>
+								<p>
+									A person in a team learns to show empathy, develops emotional
+									intelligence, learns to listen, respect, and understand
+									others.
+								</p>
+								<div class="team__button">find out more</div>
+							</div>
+						</div>
+						<img src="@img/team_photos" alt="team-photos" />
+					</div>
+
+					<img
+						src="@img/team-bg-top.svg"
+						class="team__bg-top"
+						alt="team-bg-top"
+					/>
+					<img
+						src="@img/team-bg-bottom.svg"
+						class="team__bg-bottom"
+						alt="team-bg-bottom"
+					/>
 				</div>
 			</main>
+
 			@@include('html/_footer.htm',{})
 		</div>
 		@@include('html/_popup.htm',{}) @@include('html/_js.htm',{})
