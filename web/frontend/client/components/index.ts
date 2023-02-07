@@ -1,0 +1,10 @@
+export { Layout } from './Layout'
+export { Meta } from './Layout/Meta'
+
+export { Header } from './Header'
+export { About } from './About'
+export { Skills } from './Skills'
+export { Projects } from './Projects'
+export { Project } from './Project'
+export { Slider } from './Project/Slider'
+export { Footer } from './Footer'

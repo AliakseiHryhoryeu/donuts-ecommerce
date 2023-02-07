@@ -1,0 +1,134 @@
+.skills {
+	padding: 30px 0px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--Dark-bg-primary);
+	&__wrapper {
+		width: var(--wrapper_width);
+		min-height: 80px;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
+	&__title {
+		align-self: center;
+		font-style: normal;
+		font-weight: 700;
+		font-size: var(--Fonts-h1);
+		line-height: 79px;
+		margin-bottom: 20px;
+		-webkit-background-clip: text;
+		color: transparent;
+		background-image: linear-gradient(
+			147deg,
+			#f90fd8,
+			#f54377 26%,
+			#fc1c1c 50%,
+			#ffc30d 75%,
+			#72fb59
+		);
+	}
+	&__text {
+		font-weight: 400;
+		font-size: var(--Fonts-h4);
+		letter-spacing: -0.4px;
+		line-height: 1.7em;
+
+		span {
+			font-weight: 400;
+			padding-right: 4px;
+			color: var(--Dark-title-color);
+		}
+	}
+	&_dark {
+		background-color: var(--Dark-bg-primary);
+		.skills__wrapper {
+			.skills__title {
+				color: transparent;
+				background-image: linear-gradient(
+					147deg,
+					#f90fd8,
+					#f54377 26%,
+					#fc1c1c 50%,
+					#ffc30d 75%,
+					#72fb59
+				);
+			}
+			.skills__text {
+				color: var(--Dark-font-color);
+				span {
+					font-weight: 400;
+					color: var(--Dark-title-color);
+				}
+			}
+		}
+	}
+	&_light {
+		background-color: var(--Light-bg-primary);
+		.skills__wrapper {
+			.skills__title {
+				color: transparent;
+				background-image: linear-gradient(
+					147deg,
+					#f90fd8,
+					#f54377 26%,
+					#fc1c1c 50%,
+					#ffc30d 75%,
+					#72fb59
+				);
+			}
+			.skills__text {
+				color: var(--Light-font-color);
+				span {
+					font-weight: 700;
+					color: var(--Light-title-color);
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.skills {
+		&__title {
+			margin-bottom: 0;
+		}
+	}
+}
+@media only screen and (max-width: 768px) {
+	.skills {
+		&__title {
+			letter-spacing: -1px;
+			margin-bottom: 0;
+		}
+		&__text {
+			font-weight: 400;
+			letter-spacing: -0.2px;
+			width: 100%;
+			line-height: 30px;
+		}
+	}
+}
+@media only screen and (max-width: 600px) {
+	.skills {
+		&__title {
+			line-height: normal;
+			margin-bottom: 0px;
+		}
+	}
+}
+@media screen and (max-width: 470px) {
+	.skills {
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.skills {
+		&__wrapper {
+			margin: 0 10px;
+		}
+	}
+}
