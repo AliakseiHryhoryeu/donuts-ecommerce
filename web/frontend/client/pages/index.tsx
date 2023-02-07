@@ -7,11 +7,10 @@ const Home: FC = () => {
 	return (
 		<>
 			<Head>
-				<title>Aliaksei Hryhoryeu - Resume</title>
+				<title>Donuts</title>
 			</Head>
 			<About />
-			<Skills />
-			<Projects />
+
 			<Footer />
 		</>
 	)

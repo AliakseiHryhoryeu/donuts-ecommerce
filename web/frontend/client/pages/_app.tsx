@@ -4,12 +4,12 @@ import Head from 'next/head'
 import { Provider } from 'react-redux'
 import { store } from 'src/store'
 
-import { TrianglesBG } from 'src/components/TrianglesBG'
+// import { TrianglesBG } from 'src/components/TrianglesBG'
 import { Layout, Meta } from 'src/components/'
 
 import 'src/styles/globals.scss'
-import { useEffect } from 'react'
-import { useActions } from 'src/hooks/useActions'
+// import { useEffect } from 'react'
+// import { useActions } from 'src/hooks/useActions'
 function MyApp({ Component, pageProps }: AppProps) {
 	return (
 		<Provider store={store}>
@@ -18,8 +18,6 @@ function MyApp({ Component, pageProps }: AppProps) {
 					<Meta />
 				</Head>
 				<Component {...pageProps} />
-
-				<TrianglesBG />
 			</Layout>
 		</Provider>
 	)
