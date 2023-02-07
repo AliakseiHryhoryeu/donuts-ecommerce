@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.htm',{ "title":"Главная" })
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page">
+				<section class="gift__fullContainer">
+					<div class="gift__container">
+						<div class="gift__left">
+							<div class="gift__title">Collect the gift box!</div>
+							<div class="gift__text">
+								Fill out the form and our manager will contact you within 15
+								minutes to clarify the details
+							</div>
+							<input type="checkbox" placeholder="Name" />
+							<input type="checkbox" placeholder="Phonenumber" />
+							<div class="gift__text">How many doughnuts are in box?</div>
+							<div class="gift__checkbox-wrapper">
+								<div class="gift__checkbox">3</div>
+								<div class="gift__checkbox">6</div>
+								<div class="gift__checkbox gift__checkbox-active">9</div>
+								<div class="gift__checkbox">12</div>
+							</div>
+							<div class="gift__text">You have chosen</div>
+							<div class="gift__chosen">
+								<div class="gift__chosen-item">
+									<p>choco-boom</p>
+									<div class="gift__chosen-count">2</div>
+								</div>
+								<div class="gift__chosen-item"><p>milky way</p></div>
+								<div class="gift__chosen-item">
+									<p>rose</p>
+									<div class="gift__chosen-count">3</div>
+								</div>
+								<div class="gift__chosen-item">
+									<p>rose</p>
+									<div class="gift__chosen-count">1</div>
+								</div>
+								<div class="gift__chosen-item">
+									<p>rose</p>
+									<div class="gift__chosen-count">3</div>
+								</div>
+							</div>
+							<div class="gift__text">Delivery address</div>
+							<input type="text" placeholder="Street" />
+							<div class="gift__input-wrapper">
+								<input type="text" placeholder="House" />
+								<input type="text" placeholder="Flat" />
+								<input type="text" placeholder="Floor" />
+							</div>
+							<div class="gift__text">Payment method:</div>
+							<div class="gift__input-wrapper">
+								<input type="checkbox" placeholder="House" />
+								<p>Bank card</p>
+								<input type="checkbox" placeholder="House" />
+								<p>Bank card on the site</p>
+
+								<input type="checkbox" placeholder="House" />
+								<p>Cash</p>
+							</div>
+							<div class="gift__input-wrapper">
+								<input type="text" placeholder="Expiration date" />
+								<input type="text" placeholder="CVC" />
+							</div>
+							<div class="gift__description">
+								Card data is protected. The received data will not be used
+								anywhere.
+							</div>
+							<div class="gift__input-wrapper">
+								<input type="checkbox" placeholder="House" />
+								<p>
+									I agree to the terms of <span>personal data processing</span>
+								</p>
+							</div>
+							<div class="gift__total">total cost: 50$</div>
+							<div class="gift__button">Proceed to checkout</div>
+						</div>
+						<div class="gift__right"></div>
+					</div>
+				</section>
+			</main>
+
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_popup.htm',{}) @@include('html/_js.htm',{})
+	</body>
+</html>
