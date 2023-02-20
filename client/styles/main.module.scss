@@ -1,0 +1,10 @@
+.main {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	position: relative;
+	height: 100vh;
+	background-color: var(--Dark-bg-secondary);
+	overflow-x: hidden;
+}
