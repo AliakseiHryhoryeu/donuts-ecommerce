@@ -36,6 +36,7 @@
 		"incremental": true,
 
 		"baseUrl": ".",
+		"plugins": [{ "name": "typescript-plugin-css-modules" }],
 		"paths": {
 			"src/*": ["./*"],
 			"public/*": ["./public/*"]

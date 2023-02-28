@@ -1,56 +1,31 @@
-import { FC, useEffect, useState } from 'react'
-import { useRouter } from 'next/router'
+import React, { FC } from 'react'
 import Head from 'next/head'
 
-import { AddTaskBtn, TaskInfo } from 'src/components/Task/'
-import { MainPopup, Header } from 'src/components/Main/'
-import { TaskCreate } from 'src/components/Task/'
-
-import { useActions } from 'src/hooks/useActions'
-import { useTypedSelector } from 'src/hooks/useTypedSelector'
-import { RootState } from 'src/store'
-
 import styles from '../styles/main.module.scss'
+import MainPreview from 'src/components/sections/MainPreview'
+import SpacerText from 'src/components/sections/SpacerText'
+import SpacerHorizontal from 'src/components/sections/SpacerHorizontal'
+import AboutTeam from 'src/components/sections/AboutTeam'
+import { Collect } from 'src/components/sections/Collect'
+import Best from 'src/components/sections/Best'
+import Donuts from 'src/components/sections/Donuts'
 
-const Home: FC = () => {
-	const { theme, isAuth, tasks } = useTypedSelector((state: RootState) => {
-		return {
-			theme: state.theme.theme,
-			isAuth: state.user.isAuth,
-			tasks: state.user.activeUser.tasks,
-		}
-	})
-	const router = useRouter()
-	const allActions = useActions()
-
-	useEffect(() => {
-		if (isAuth == false) {
-			router.push('/login')
-		}
-	})
-	return (
-		<>
-			<Head>
-				<title>Good Deeds</title>
-			</Head>
-			<main className={styles.main}>
-				<Header />
-				{tasks.map(item => {
-					return (
-						<TaskInfo
-							key={item._id}
-							taskid={item._id}
-							title={item.title}
-							checked={item.checked}
-						/>
-					)
-				})}
-				<AddTaskBtn />
-			</main>
-			<TaskCreate />
-			<MainPopup />
-		</>
-	)
-}
+const Home: FC = () => (
+	<>
+		<Head>
+			<title>Donuts</title>
+		</Head>
+		<main className={styles.main}>
+			<MainPreview />
+			<SpacerText />
+			<SpacerHorizontal text={'our team'} />
+			<AboutTeam />
+			<SpacerHorizontal text={'donuts'} />
+			<Donuts />
+			<Collect />
+			{/* <Best /> */}
+		</main>
+	</>
+)
 
 export default Home

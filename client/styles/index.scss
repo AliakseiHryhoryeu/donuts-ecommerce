@@ -1,4 +1,7 @@
 @import 'assets/styles/variables.scss';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 * {
 	margin: 0;
@@ -11,8 +14,7 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 body {
-	min-height: 100vh;
-	background: #18181a;
+	@apply h-full;
 }
 
 a {

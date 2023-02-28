@@ -13,18 +13,18 @@ const PassResetPage: FC = () => {
 	const router = useRouter()
 	const { isAuth } = useTypedSelector((state: RootState) => {
 		return {
-			isAuth: state.user.isAuth,
+			isAuth: state.user.isAuth
 		}
 	})
 
 	const formik = useFormik({
 		initialValues: {
-			email: '',
+			email: ''
 		},
 		validationSchema: passResetSchema,
-		onSubmit: values => {
+		onSubmit: (values) => {
 			// will be send mail to email
-		},
+		}
 	})
 	useEffect(() => {
 		if (isAuth === true) {
@@ -44,8 +44,8 @@ const PassResetPage: FC = () => {
 				<div className={styles.passReset__title}>Password Reset</div>
 				<div className={styles.passReset__subtitle}>
 					Enter your <b>GOOD DEEDS username</b> or the <b> email address</b>
-					that you used to register. We'll send you an email with your username
-					and a link to reset your password.
+					that you used to register. We &apos ll send you an email with your
+					username and a link to reset your password.
 				</div>
 				<div className={styles.passReset__wrapper}>
 					<form

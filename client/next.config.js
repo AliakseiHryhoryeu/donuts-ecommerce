@@ -7,6 +7,14 @@ module.exports = withBundleAnalyzer({
 	eslint: {
 		dirs: ['.'],
 	},
+	extends: [
+		'next',
+		'next/core-web-vitals',
+		'eslint:all',
+		'plugin:react/all',
+		'plugin:import/errors',
+		'plugin:import/warnings',
+	],
 	env: {
 		SERVER_IP1: process.env.SERVER_IP1,
 	},
