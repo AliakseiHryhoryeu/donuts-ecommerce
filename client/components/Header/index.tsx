@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router'
 import React, { FC } from 'react'
 import DonutIcon from '../svg/DonutIcon'
 import InstagramIcon from '../svg/InstagramIcon'
@@ -9,6 +10,8 @@ import BagIcon from './BagIcon'
 import styles from './header.module.scss'
 
 export const Header: FC = () => {
+	const { pathname } = useRouter()
+	const router = useRouter()
 	return (
 		<div className={`${styles.header}`}>
 			<div className={styles.header__container}>
@@ -16,19 +19,46 @@ export const Header: FC = () => {
 					<span></span>
 				</div>
 
-				<div className={styles.header__logo}>
+				<div
+					className={styles.header__logo}
+					onClick={() => {
+						router.push('/')
+					}}
+				>
 					<DonutIcon />
 					Doughnuts
 				</div>
 				<nav className={styles.header__nav}>
 					<ul>
-						<li>About us</li>
-						<li className={styles.header__nav_active}>Catalog</li>
-						<li className={styles.header__nav_bag}>
+						<li
+							className={
+								pathname === '/' ? styles.header__nav_active : undefined
+							}
+						>
+							About us
+						</li>
+						<li
+							className={
+								pathname === '/catalog' ? styles.header__nav_active : undefined
+							}
+						>
+							Catalog
+						</li>
+						<li
+							className={`
+							${pathname === '/bag' ? styles.header__nav_active : undefined} 							
+							${styles.header__nav_bag}`}
+						>
 							<p>Bag</p>
 							<BagIcon BagItemsCounter={'3'} />
 						</li>
-						<li>Contacts</li>
+						<li
+							className={
+								pathname === '/contacts' ? styles.header__nav_active : undefined
+							}
+						>
+							Contacts
+						</li>
 					</ul>
 				</nav>
 				<div className={styles.header__contacts}>
