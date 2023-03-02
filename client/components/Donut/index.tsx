@@ -22,6 +22,7 @@ export const Donut: FC = () => {
 			updateCount(count + newValue)
 		}
 	}
+
 	return (
 		<div className={styles.donuts__product}>
 			<img src='static/products/donut-1.png' alt='product-img' />

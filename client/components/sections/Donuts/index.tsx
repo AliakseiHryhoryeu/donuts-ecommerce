@@ -16,7 +16,6 @@ export const Donuts: FC = () => {
 				<Donut />
 				<Donut />
 				<Donut />
-				<Donut />
 			</ContainerWrapper>
 			<div className={styles.donuts__button}>
 				<p>all products</p>

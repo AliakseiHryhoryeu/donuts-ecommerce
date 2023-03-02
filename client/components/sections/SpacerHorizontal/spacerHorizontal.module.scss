@@ -7,13 +7,23 @@
 	border: 2px solid var(--color-secondary);
 	border-right: none;
 	border-left: none;
-	p {
+	&__paragraph {
 		white-space: nowrap;
-		margin: 0px 100px;
+		padding: 0px 100px;
 		font-weight: 900;
 		font-size: 96px;
 		text-transform: uppercase;
 		color: transparent;
 		-webkit-text-stroke: 3px var(--color-secondary);
+		animation: marquee 5s linear infinite;
+	}
+}
+
+@keyframes marquee {
+	0% {
+		transform: translate(0, 0);
+	}
+	100% {
+		transform: translate(-100%, 0);
 	}
 }
