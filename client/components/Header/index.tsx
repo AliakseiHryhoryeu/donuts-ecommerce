@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { useRouter } from 'next/router'
 import React, { FC } from 'react'
 import DonutIcon from '../svg/DonutIcon'
@@ -35,21 +36,22 @@ export const Header: FC = () => {
 								pathname === '/' ? styles.header__nav_active : undefined
 							}
 						>
-							About us
+							<Link href='/'>About us</Link>
 						</li>
 						<li
 							className={
 								pathname === '/catalog' ? styles.header__nav_active : undefined
 							}
 						>
-							Catalog
+							<Link href='/catalog'>Catalog</Link>
 						</li>
 						<li
 							className={`
 							${pathname === '/bag' ? styles.header__nav_active : undefined} 							
 							${styles.header__nav_bag}`}
 						>
-							<p>Bag</p>
+							<Link href='/bag'>Bag</Link>
+
 							<BagIcon BagItemsCounter={'3'} />
 						</li>
 						<li
@@ -57,7 +59,7 @@ export const Header: FC = () => {
 								pathname === '/contacts' ? styles.header__nav_active : undefined
 							}
 						>
-							Contacts
+							<Link href='/contacts'>Contacts</Link>
 						</li>
 					</ul>
 				</nav>
@@ -65,13 +67,19 @@ export const Header: FC = () => {
 					<ul>
 						<li>+1 (111) 123-11-22</li>
 						<li className={styles.header__contacts__social}>
-							<InstagramIcon />
+							<a href='https://www.instagram.com/'>
+								<InstagramIcon />
+							</a>
 						</li>
 						<li className={styles.header__contacts__social}>
-							<TelegramIcon />
+							<a href='https://telegram.org/'>
+								<TelegramIcon />
+							</a>
 						</li>
 						<li className={styles.header__contacts__social}>
-							<WhatsAppIcon />
+							<a href='https://www.whatsapp.com/'>
+								<WhatsAppIcon />
+							</a>
 						</li>
 					</ul>
 				</div>

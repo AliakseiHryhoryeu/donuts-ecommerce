@@ -23,7 +23,7 @@ const Home: FC = () => (
 			<SpacerHorizontal text={'donuts'} />
 			<Donuts />
 			<Collect />
-			{/* <Best /> */}
+			<Best />
 		</main>
 	</>
 )

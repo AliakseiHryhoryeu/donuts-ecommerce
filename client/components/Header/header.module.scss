@@ -63,6 +63,9 @@
 				padding: 4px 8px;
 				margin: 0px 2px;
 				cursor: pointer;
+				a {
+					color: var(--color-primary);
+				}
 			}
 		}
 	}
@@ -74,9 +77,13 @@
 			li {
 				cursor: pointer;
 				margin: 4px 10px;
-				svg {
-					height: 35px;
-					width: 35px;
+				a {
+					height: 100%;
+					width: 100%;
+					svg {
+						height: 35px;
+						width: 35px;
+					}
 				}
 			}
 		}

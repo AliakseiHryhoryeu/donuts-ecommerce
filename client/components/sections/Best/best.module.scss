@@ -48,19 +48,20 @@
 		}
 		&_btn {
 			content: '';
-			height: 16px;
-			width: 16px;
+			cursor: pointer;
+			height: 12px;
+			width: 12px;
 			border-radius: 100%;
 			border: 2px solid rgba(101, 93, 93, 1);
 			margin: 5px;
 			font-size: 0px;
 			&_active {
 				content: '';
-				height: 20px;
-				width: 20px;
+				height: 6px;
+				width: 6px;
 				font-size: 6px;
 
-				border: 6px solid var(--color-secondary);
+				border: 7px solid var(--color-secondary);
 			}
 		}
 	}

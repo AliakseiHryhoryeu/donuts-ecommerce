@@ -32,6 +32,7 @@
 			justify-content: flex-start;
 			p {
 				margin: 10px 0px;
+				font-size: 24px;
 			}
 		}
 	}
@@ -53,6 +54,7 @@
 			justify-content: flex-start;
 			p {
 				margin: 10px 0px;
+				font-size: 24px;
 				cursor: pointer;
 			}
 		}
@@ -73,7 +75,7 @@
 			flex-direction: row;
 			align-items: flex-start;
 			justify-content: flex-start;
-			img {
+			svg {
 				height: 50px;
 				width: 50px;
 				margin: 20px 10px;
@@ -87,26 +89,8 @@
 			p {
 				margin-top: 20px;
 				cursor: pointer;
+				font-size: 24px;
 			}
-		}
-	}
-	&__spacer {
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		align-items: center;
-		padding: 10px 0px;
-		border: 2px solid var(--color-secondary);
-		border-right: none;
-		border-left: none;
-		p {
-			white-space: nowrap;
-			margin: 0px 100px;
-			font-weight: 900;
-			font-size: 96px;
-			text-transform: uppercase;
-			color: transparent;
-			-webkit-text-stroke: 3px var(--color-secondary);
 		}
 	}
 }
