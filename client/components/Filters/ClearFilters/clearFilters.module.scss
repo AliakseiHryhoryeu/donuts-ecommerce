@@ -1,0 +1,15 @@
+.clearFilters {
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: row;
+		font-size: 24px;
+		padding: 10px;
+		cursor: pointer;
+		color: var(--color-secondary);
+		p {
+			padding-right: 10px;
+		}
+	}
+}
