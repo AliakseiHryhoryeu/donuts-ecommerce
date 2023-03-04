@@ -16,7 +16,7 @@ export const Catalog: FC = () => {
 				<div className={styles.catalog__title}>Donuts</div>
 				<ContainerWrapper className={styles.catalog__filters__container}>
 					<DefaultFilter />
-					{/* <TasteFilter /> */}
+					<TasteFilter />
 					<ColorFilter />
 					<ClearFilters />
 				</ContainerWrapper>
