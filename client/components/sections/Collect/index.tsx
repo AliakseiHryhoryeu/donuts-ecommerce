@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router'
 import React, { FC } from 'react'
 import ContainerMaxWidth from 'src/components/ContainerMaxWidth'
 import ContainerWrapper from 'src/components/ContainerWrapper'
@@ -5,6 +6,7 @@ import ContainerWrapper from 'src/components/ContainerWrapper'
 import styles from './collect.module.scss'
 
 export const Collect: FC = () => {
+	const router = useRouter()
 	return (
 		<ContainerMaxWidth className={styles.collect__fullContainer}>
 			<ContainerWrapper className={styles.collect__container}>
@@ -20,7 +22,14 @@ export const Collect: FC = () => {
 							your loved ones!
 						</div>
 					</div>
-					<div className={styles.collect__button}>Collect a box</div>
+					<div
+						className={styles.collect__button}
+						onClick={() => {
+							router.push('/giftbox')
+						}}
+					>
+						Collect a box
+					</div>
 				</div>
 				<img src='/static/Collect/gift-box.png' alt='' />
 			</ContainerWrapper>

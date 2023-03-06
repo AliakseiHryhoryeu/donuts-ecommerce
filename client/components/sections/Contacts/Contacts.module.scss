@@ -1,0 +1,47 @@
+.donuts {
+	&__container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+	&__wrapper {
+		margin-top: 100px;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+	&__button {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		font-weight: 600;
+		font-size: 24px;
+		text-transform: uppercase;
+		cursor: pointer;
+		margin-top: 40px;
+		text-align: center;
+		p {
+			margin-right: 9px;
+		}
+	}
+	&__spacer {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		padding: 10px 0px;
+		border: 2px solid var(--color-secondary);
+		border-right: none;
+		border-left: none;
+		p {
+			white-space: nowrap;
+			margin: 0px 100px;
+			font-weight: 900;
+			font-size: 96px;
+			text-transform: uppercase;
+			color: transparent;
+			-webkit-text-stroke: 3px var(--color-secondary);
+		}
+	}
+}

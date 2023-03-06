@@ -1,33 +1,43 @@
 import React, { FC } from 'react'
+import CrossIcon from 'src/components/svg/CrossIcon'
+import Background from '../Background/Background'
 
-import styles from './QuestionsPopup.module.scss'
+import styles from './BagPopup.module.scss'
+import { BagDonut } from './BagDonut'
+import { useActions } from 'src/hooks/useActions'
 
 export const BagPopup: FC = () => {
+	const allActions = useActions()
+
 	return (
-		<div className={styles.header__nav_bag_counter}>
-			<div className=''>
-				<div className=''>Your bag</div>
-				<div className=''>cross svg</div>
-			</div>
-			<div className='donut component'>
-				<div className=''>
-					<div className=''>PNG donut</div>
-					<div className=''>
-						<div className=''>Donut name</div>
-						<div className=''>Donut description</div>
+		<div className={styles.bag}>
+			<div className={styles.bag__container}>
+				<div className={styles.bag__close}>
+					<div>Your bag</div>
+					<div
+						className={styles.bag__close__btn}
+						onClick={() => {
+							allActions.toggleBagPopup()
+						}}
+					>
+						<CrossIcon />
 					</div>
 				</div>
-				<div className=''>
-					<div className='counter'>
-						svg minus
-						<p>10</p>
-						svg plus
-					</div>
-					11.22$
+
+				<div className={styles.donut__container}>
+					<BagDonut />
+					<BagDonut />
+					<BagDonut />
+					<BagDonut />
+					<BagDonut />
+					<BagDonut />
+				</div>
+				<div className={styles.bag__price__buttons}>
+					<div className={styles.bag__price__text}>Total cost:14.14$</div>
+					<div className={styles.bag__price__btn}>Checkout</div>
 				</div>
 			</div>
-			<div className=''>Total cost:14.14$</div>
-			<div className=''>Checkout</div>
+			<Background />
 		</div>
 	)
 }

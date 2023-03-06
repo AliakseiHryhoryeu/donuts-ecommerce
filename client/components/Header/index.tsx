@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import React, { FC } from 'react'
+import { useActions } from 'src/hooks/useActions'
 import DonutIcon from '../svg/DonutIcon'
 import InstagramIcon from '../svg/InstagramIcon'
 import TelegramIcon from '../svg/TelegramIcon'
@@ -13,6 +14,8 @@ import styles from './header.module.scss'
 export const Header: FC = () => {
 	const { pathname } = useRouter()
 	const router = useRouter()
+	const allActions = useActions()
+
 	return (
 		<div className={`${styles.header}`}>
 			<div className={styles.header__container}>
@@ -49,8 +52,11 @@ export const Header: FC = () => {
 							className={`
 							${pathname === '/bag' ? styles.header__nav_active : undefined} 							
 							${styles.header__nav_bag}`}
+							onClick={() => {
+								allActions.toggleBagPopup()
+							}}
 						>
-							<Link href='/bag'>Bag</Link>
+							<p>Bag</p>
 
 							<BagIcon BagItemsCounter={'3'} />
 						</li>

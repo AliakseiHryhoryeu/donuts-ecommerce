@@ -1,8 +1,8 @@
 import React, { FC } from 'react'
 
-import styles from './QuestionsPopup.module.scss'
+import styles from './HeaderMenuPopup.module.scss'
 
-export const QuestionsPopup: FC = () => {
+export const HeaderMenuPopup: FC = () => {
 	return (
 		<div className={styles.header__nav_bag_counter}>
 			<div className=''>
@@ -34,4 +34,4 @@ export const QuestionsPopup: FC = () => {
 	)
 }
 
-export default QuestionsPopup
+export default HeaderMenuPopup

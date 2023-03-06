@@ -1,0 +1,146 @@
+.bag {
+	position: fixed;
+	width: 100vw;
+	height: 100%;
+	top: 0;
+	&__container {
+		z-index: 40;
+		width: 800px;
+		min-height: 600px;
+		position: relative;
+
+		top: 50%;
+		left: 50%;
+		margin-right: -50%;
+		transform: translate(-50%, -50%);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-start;
+		background-color: #fff;
+	}
+	&__close {
+		font-size: 24px;
+		display: flex;
+		position: relative;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 56px;
+		cursor: pointer;
+		border-bottom: 1px solid var(--color-secondary);
+		&__btn {
+			position: absolute;
+			right: 0px;
+			top: 0px;
+			padding: 12px;
+			svg {
+				height: 26px;
+				width: 26px;
+			}
+		}
+	}
+
+	&__price {
+		&__buttons {
+			display: flex;
+			flex-direction: row;
+			align-items: flex-start;
+			justify-content: space-between;
+			width: 70%;
+			padding-top: 20px;
+		}
+		&__text {
+			font-size: 28px;
+			color: var(--color-secondary);
+		}
+		&__btn {
+			font-size: 18px;
+			background-color: var(--color-secondary);
+			border-radius: 20px;
+			color: #fff;
+			padding: 17px 62px;
+			cursor: pointer;
+		}
+	}
+}
+
+.donut {
+	position: relative;
+	padding: 10px;
+	&__cross {
+		position: absolute;
+		padding: 10px;
+		right: 0;
+		top: 0;
+		cursor: pointer;
+		svg {
+			height: 24px;
+			width: 24px;
+			line {
+				stroke: #000;
+			}
+		}
+	}
+	&__container {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		padding-top: 30px;
+	}
+	&__img {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		img {
+			height: 80px;
+			width: 80px;
+		}
+	}
+	&__counter {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: row;
+		p {
+			font-size: 24px;
+			padding: 0px 6px;
+		}
+		div {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		svg {
+			cursor: pointer;
+			&:hover {
+				path {
+					stroke: var(--color-secondary);
+				}
+				circle {
+					stroke: var(--color-secondary);
+				}
+			}
+		}
+		&__component {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+	}
+	&__text {
+		&__container {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: flex-start;
+		}
+		&__title {
+			font-size: 24px;
+		}
+		&__description {
+			font-size: 18px;
+		}
+	}
+}

@@ -1,4 +1,5 @@
 export interface IPopupsState {
-	main: boolean
-	taskUpdate: boolean
+	headerPopup: boolean
+	bagPopup: boolean
+	questionsPopup: boolean
 }

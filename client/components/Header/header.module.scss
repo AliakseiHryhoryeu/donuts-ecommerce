@@ -38,7 +38,7 @@
 			padding-right: 14px;
 			&_counter {
 				position: absolute;
-				top: -15px;
+				top: -10px;
 				right: -5px;
 				font-size: 12px;
 				font-weight: 400;
@@ -63,6 +63,8 @@
 				padding: 4px 8px;
 				margin: 0px 2px;
 				cursor: pointer;
+				color: var(--color-primary);
+				font-size: 24px;
 				a {
 					color: var(--color-primary);
 				}
@@ -77,6 +79,7 @@
 			li {
 				cursor: pointer;
 				margin: 4px 10px;
+				font-size: 24px;
 				a {
 					height: 100%;
 					width: 100%;
