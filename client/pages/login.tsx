@@ -47,11 +47,11 @@ const LoginPage: FC = () => {
 	return (
 		<>
 			<Head>
-				<title>Good Deeds - Login page</title>
+				<title>DOUGHNUTS - Login page</title>
 			</Head>
 			<div className={styles.login}>
 				<div className={styles.login__header}>
-					<a href='/'>good deeds</a>
+					<a href='/'>DOUGHNUTS</a>
 				</div>
 				<div className={styles.login__title}>Login page.</div>
 				<div className={styles.login__wrapper}>

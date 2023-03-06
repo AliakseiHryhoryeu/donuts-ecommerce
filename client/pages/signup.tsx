@@ -52,11 +52,11 @@ const SignUpPage: FC = () => {
 	return (
 		<>
 			<Head>
-				<title>Good Deeds - Sign up</title>
+				<title>DOUGHNUTS - Sign up</title>
 			</Head>
 			<div className={styles.signup}>
 				<div className={styles.signup__header}>
-					<a href='/'>Good deeds</a>
+					<a href='/'>DOUGHNUTS</a>
 				</div>
 				<div className={styles.signup__title}>Sign up page.</div>
 				<div className={styles.signup__wrapper}>
@@ -170,7 +170,7 @@ const SignUpPage: FC = () => {
 								checked={formik.values.emailSpam}
 							/>
 							<div className={styles.signup__form_title}>
-								I would prefer not to receive marketing messages from GOOD DEEDS
+								I would prefer not to receive marketing messages from DOUGHNUTS
 							</div>
 						</div>
 						<div className={styles.signup__form_checkbox}>
@@ -188,7 +188,7 @@ const SignUpPage: FC = () => {
 							/>
 							<div className={styles.signup__form_title}>
 								I agree to the
-								<span>GOOD DEEDS Terms and Conditions of Use</span>
+								<span>DOUGHNUTS Terms and Conditions of Use</span>
 								and<span>Privacy Policy.</span>
 							</div>
 						</div>

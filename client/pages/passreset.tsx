@@ -38,15 +38,15 @@ const PassResetPage: FC = () => {
 	return (
 		<>
 			<Head>
-				<title>Good Deeds - Password Reset</title>
+				<title>DOUGHNUTS - Password Reset</title>
 			</Head>
 			<div className={styles.passReset}>
 				<div className={styles.passReset__header}>
-					<a href='/'>good deeds</a>
+					<a href='/'>DOUGHNUTS</a>
 				</div>
 				<div className={styles.passReset__title}>Password Reset</div>
 				<div className={styles.passReset__subtitle}>
-					Enter your <b>GOOD DEEDS username</b> or the <b> email address</b>
+					Enter your <b>DOUGHNUTS username</b> or the <b> email address</b>
 					that you used to register. We &apos ll send you an email with your
 					username and a link to reset your password.
 				</div>
@@ -86,7 +86,7 @@ const PassResetPage: FC = () => {
 						</button>
 						<div className={styles.passReset__help__title}>
 							If you still need help, contact
-							<a href='/support'>GOOD DEEDS Support</a>.
+							<a href='/support'>DOUGHNUTS Support</a>.
 						</div>
 					</form>
 				</div>

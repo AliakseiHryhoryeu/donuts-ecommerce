@@ -13,7 +13,7 @@ const Page404: FC = () => {
 	return (
 		<div className={styles.page404}>
 			<div className={styles.page404__header}>
-				<a href='/'>good deeds</a>
+				<a href='/'>DOUGHNUTS</a>
 			</div>
 			<div className={styles.page404__title}>404</div>
 			<div className={styles.page404__subtitle}>
