@@ -1,4 +1,4 @@
-import { ITask } from '../tasks/tasks.types'
+// import { ITask } from '../tasks/tasks.types'
 
 export interface IUserState {
 	activeUser: IUser
@@ -9,8 +9,8 @@ export interface IUserState {
 export interface IUser {
 	username: string
 	email: string
-	tasks: ITask[]
-	contacts: IContacts
+	// tasks: ITask[]
+	// contacts: IContacts
 }
 
 export interface IToken {
@@ -27,7 +27,7 @@ export interface IUserAuthResponse {
 			username: string
 			email: string
 			contacts: IContacts
-			tasks: ITask[]
+			// tasks: ITask[]
 		}
 	}
 }
@@ -40,7 +40,7 @@ export interface IUserResponse {
 			username: string
 			email: string
 			contacts: IContacts
-			tasks: ITask[]
+			// tasks: ITask[]
 		}
 	}
 }
@@ -72,9 +72,9 @@ export const emptyState = {
 		contacts: {
 			pending: [],
 			requests: [],
-			added: [],
-		},
+			added: []
+		}
 	},
 	token: '',
-	isAuth: false,
+	isAuth: false
 }

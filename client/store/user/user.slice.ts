@@ -10,37 +10,37 @@ import { emptyState } from './user.types'
 const initialState: IUserState = {
 	activeUser: {
 		username: '',
-		email: '',
-		tasks: [],
-		contacts: {
-			pending: [],
-			requests: [],
-			added: [],
-		},
+		email: ''
+		// tasks: [],
+		// contacts: {
+		// 	pending: [],
+		// 	requests: [],
+		// 	added: [],
+		// },
 	},
 	token: '',
-	isAuth: false,
+	isAuth: false
 }
 
 export const userSlice = createSlice({
 	name: 'userSlice',
 	initialState,
 	reducers: {
-		logout: state => {
+		logout: (state) => {
 			localStorage.removeItem('token')
 			state = emptyState
 		},
 
 		// Settings
-		updateToken: state => {
+		updateToken: (state) => {
 			try {
 				state.token = localStorage.getItem('token') || ''
 			} catch (e) {
 				console.log(e)
 			}
-		},
+		}
 	},
-	extraReducers: builder => {
+	extraReducers: (builder) => {
 		builder.addMatcher(
 			// AUTH
 			userApi.endpoints.auth.matchFulfilled,
@@ -133,7 +133,7 @@ export const userSlice = createSlice({
 				userApi.endpoints.contactAccept.matchFulfilled,
 				(state, { payload }) => {
 					if (payload.success) {
-						state.activeUser.contacts = payload.data.contacts
+						// state.activeUser.contacts = payload.data.contacts
 					} else {
 						console.log(payload?.message)
 					}
@@ -144,7 +144,7 @@ export const userSlice = createSlice({
 				userApi.endpoints.contactRequest.matchFulfilled,
 				(state, { payload }) => {
 					if (payload.success) {
-						state.activeUser.contacts = payload.data.contacts
+						// state.activeUser.contacts = payload.data.contacts
 					} else {
 						console.log(payload?.message)
 					}
@@ -155,7 +155,7 @@ export const userSlice = createSlice({
 				userApi.endpoints.contactReject.matchFulfilled,
 				(state, { payload }) => {
 					if (payload.success) {
-						state.activeUser.contacts = payload.data.contacts
+						// state.activeUser.contacts = payload.data.contacts
 					} else {
 						console.log(payload?.message)
 					}
@@ -166,13 +166,13 @@ export const userSlice = createSlice({
 				userApi.endpoints.contactDelete.matchFulfilled,
 				(state, { payload }) => {
 					if (payload.success) {
-						state.activeUser.contacts = payload.data.contacts
+						// state.activeUser.contacts = payload.data.contacts
 					} else {
 						console.log(payload?.message)
 					}
 				}
 			)
-	},
+	}
 })
 
 export default userSlice.reducer
