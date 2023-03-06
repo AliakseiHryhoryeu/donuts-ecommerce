@@ -1,36 +1,39 @@
-import React, { FC, useEffect } from 'react'
-import { useRouter } from 'next/router'
+import React, { FC } from 'react'
+// import { useRouter } from 'next/router'
 import Head from 'next/head'
 import { useFormik } from 'formik'
 
 import { passResetSchema } from '../components/validation/PassResetValidation'
-import { useTypedSelector } from 'src/hooks/useTypedSelector'
-import { RootState } from '../store'
+// import { useTypedSelector } from 'src/hooks/useTypedSelector'
+// import { RootState } from '../store'
 
 import styles from '../styles/passreset.module.scss'
 
 const PassResetPage: FC = () => {
-	const router = useRouter()
-	const { isAuth } = useTypedSelector((state: RootState) => {
-		return {
-			isAuth: state.user.isAuth
-		}
-	})
+	// const router = useRouter()
+	// const { isAuth } = useTypedSelector((state: RootState) => {
+	// 	return {
+	// 		isAuth: state.user.isAuth
+	// 	}
+	// })
 
 	const formik = useFormik({
 		initialValues: {
 			email: ''
 		},
 		validationSchema: passResetSchema,
+		// onSubmit: (values) => {
+		// 	// will be send mail to email
+		// }
 		onSubmit: (values) => {
 			// will be send mail to email
 		}
 	})
-	useEffect(() => {
-		if (isAuth === true) {
-			router.push('/')
-		}
-	}, [])
+	// useEffect(() => {
+	// 	if (isAuth === true) {
+	// 		router.push('/')
+	// 	}
+	// }, [])
 
 	return (
 		<>

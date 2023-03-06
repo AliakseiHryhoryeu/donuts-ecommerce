@@ -37,7 +37,7 @@ export const AboutTeam: FC = () => {
 			}
 		}, 4000)
 		return () => clearInterval(interval)
-	}, [])
+	}, [currentSlideId, nextSlide])
 
 	return (
 		<ContainerMaxWidth className={styles.best__fullContainer}>

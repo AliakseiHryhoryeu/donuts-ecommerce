@@ -1,4 +1,4 @@
-import React, { FC, useEffect } from 'react'
+import React, { FC } from 'react'
 import { useFormik } from 'formik'
 
 // import { UserActions } from 'app/store/actions'
@@ -6,9 +6,9 @@ import { useFormik } from 'formik'
 import { signUpSchema } from '../components/validation/SignupValidation'
 
 import styles from '../styles/signup.module.scss'
-import { useTypedSelector } from '../hooks/useTypedSelector'
-import { RootState } from '../store'
-import { useRouter } from 'next/router'
+// import { useTypedSelector } from '../hooks/useTypedSelector'
+// import { RootState } from '../store'
+// import { useRouter } from 'next/router'
 import { useSignupMutation } from '../store/user/user.api'
 import Head from 'next/head'
 // import { FacebookIcon } from 'src/components/svg/FacebookIcon'
@@ -16,13 +16,14 @@ import Head from 'next/head'
 // import { WarningIcon } from 'src/components/svg/WarningIcon'
 
 const SignUpPage: FC = () => {
-	const [loginRequest, { isLoading: isLoading }] = useSignupMutation()
-	const { isAuth } = useTypedSelector((state: RootState) => {
-		return {
-			isAuth: state.user.isAuth,
-		}
-	})
-	const router = useRouter()
+	// const [loginRequest, { isLoading: isLoading }] = useSignupMutation()
+	const [loginRequest] = useSignupMutation()
+	// const { isAuth } = useTypedSelector((state: RootState) => {
+	// 	return {
+	// 		isAuth: state.user.isAuth,
+	// 	}
+	// })
+	// const router = useRouter()
 
 	const formik = useFormik({
 		initialValues: {
@@ -31,23 +32,23 @@ const SignUpPage: FC = () => {
 			confirmPassword: '',
 			username: '',
 			emailSpam: true,
-			rights: true,
+			rights: true
 		},
 		validationSchema: signUpSchema,
-		onSubmit: values => {
+		onSubmit: (values) => {
 			loginRequest({
 				email: values.email,
 				username: values.username,
-				password: values.password,
+				password: values.password
 			})
-		},
+		}
 	})
 
-	useEffect(() => {
-		if (isAuth === true) {
-			router.push('/')
-		}
-	}, [])
+	// useEffect(() => {
+	// 	if (isAuth === true) {
+	// 		router.push('/')
+	// 	}
+	// }, [])
 	return (
 		<>
 			<Head>
@@ -80,12 +81,14 @@ const SignUpPage: FC = () => {
 						onSubmit={formik.handleSubmit}
 						noValidate
 					>
-						<div className={styles.signup__form__main_title}>
+						<div
+						// className={styles.signup__form__main_title}
+						>
 							Sign up with your email address
 						</div>
 						<div className={styles.signup__form_wrapper}>
 							<div className={styles.signup__form_title}>
-								What's your email?
+								What`&apos;`s your email?
 							</div>
 							{formik?.errors && (
 								<div className={styles.signup__form_title_error}>

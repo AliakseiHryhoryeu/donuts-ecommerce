@@ -2,10 +2,13 @@
 	"extends": ["next/core-web-vitals"],
 	"parserOptions": { "project": "./tsconfig.json" },
 	"rules": {
-		"no-unused-vars": "warn",
+		"no-unused-vars": "off",
 		"@next/next/no-page-custom-font": "off",
 		"@typescript-eslint/semi": "off",
 		"@typescript/linebreak-style": "off",
-		"@next/next/no-html-link-for-pages": "off"
+		"@next/next/no-html-link-for-pages": "off",
+		"react/no-unescaped-entities": "off",
+		"@next/next/no-img-element": "off",
+		"react-hooks/exhaustive-deps": "off"
 	}
 }

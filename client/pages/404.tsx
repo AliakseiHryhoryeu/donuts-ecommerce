@@ -1,15 +1,15 @@
-import { useRouter } from 'next/router'
+// import { useRouter } from 'next/router'
 import React, { FC, useEffect } from 'react'
 
 import styles from '../styles/404.module.scss'
 
 const Page404: FC = () => {
-	const router = useRouter()
-	useEffect(() => {
-		setTimeout(() => {
-			router.push('/')
-		}, 2000)
-	}, [])
+	// const router = useRouter()
+	// useEffect(() => {
+	// 	setTimeout(() => {
+	// 		router.push('/')
+	// 	}, 2000)
+	// }, [])
 	return (
 		<div className={styles.page404}>
 			<div className={styles.page404__header}>
