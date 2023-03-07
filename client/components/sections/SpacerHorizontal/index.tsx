@@ -9,11 +9,11 @@ interface ISpacerHorizontalProps {
 export const SpacerHorizontal: FC<ISpacerHorizontalProps> = ({ text }) => {
 	return (
 		<section className={styles.spacer}>
-			<p className={styles.spacer__paragraph}>{text}</p>
-			<p className={styles.spacer__paragraph}>{text}</p>
-			<p className={styles.spacer__paragraph}>{text}</p>
-			<p className={styles.spacer__paragraph}>{text}</p>
-			<p className={styles.spacer__paragraph}>{text}</p>
+			<p>{text}</p>
+			<p>{text}</p>
+			<p>{text}</p>
+			<p>{text}</p>
+			<p>{text}</p>
 		</section>
 	)
 }

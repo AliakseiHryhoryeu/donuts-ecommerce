@@ -40,12 +40,12 @@ export const AboutTeam: FC = () => {
 			<img
 				src='/static/AboutTeam/team-bg-top.svg'
 				className={styles.team__bg_top}
-				alt='team-bg-top'
+				alt=''
 			/>
 			<img
 				src='/static/AboutTeam/team-bg-bottom.svg'
 				className={styles.team__bg_bottom}
-				alt='team-bg-bottom'
+				alt=''
 			/>
 		</ContainerMaxWidth>
 	)

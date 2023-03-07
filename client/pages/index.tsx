@@ -3,7 +3,6 @@ import Head from 'next/head'
 
 import styles from '../styles/main.module.scss'
 import MainPreview from 'src/components/sections/MainPreview/MainPreview'
-import SpacerText from 'src/components/sections/SpacerText'
 import SpacerHorizontal from 'src/components/sections/SpacerHorizontal'
 import AboutTeam from 'src/components/sections/AboutTeam'
 import { Collect } from 'src/components/sections/Collect'
@@ -17,7 +16,6 @@ const Home: FC = () => (
 		</Head>
 		<main className={styles.main}>
 			<MainPreview />
-			<SpacerText />
 			<SpacerHorizontal text={'our team'} />
 			<AboutTeam />
 			<SpacerHorizontal text={'donuts'} />

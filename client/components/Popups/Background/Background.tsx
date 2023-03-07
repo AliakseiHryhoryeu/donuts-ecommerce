@@ -9,7 +9,7 @@ export const Background: FC = () => {
 		<div
 			className={styles.background}
 			onClick={() => {
-				allActions.closeAppPopups()
+				allActions.closeAllPopups()
 			}}
 		></div>
 	)

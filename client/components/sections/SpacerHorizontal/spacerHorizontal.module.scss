@@ -7,14 +7,14 @@
 	border: 2px solid var(--color-secondary);
 	border-right: none;
 	border-left: none;
-	&__paragraph {
+	p {
 		white-space: nowrap;
 		padding: 0px 100px;
 		font-weight: 900;
 		font-size: 96px;
 		text-transform: uppercase;
 		color: transparent;
-		-webkit-text-stroke: 3px var(--color-secondary);
+		-webkit-text-stroke: 2px var(--color-secondary);
 		animation: marquee 5s linear infinite;
 	}
 }
@@ -25,5 +25,26 @@
 	}
 	100% {
 		transform: translate(-100%, 0);
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.spacer {
+		p {
+			font-size: 64px;
+			padding: 0px 50px;
+		}
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.spacer {
+		border: 1px solid var(--color-secondary);
+
+		p {
+			font-size: 40px;
+			padding: 0px 25px;
+			-webkit-text-stroke: 1px var(--color-secondary);
+		}
 	}
 }

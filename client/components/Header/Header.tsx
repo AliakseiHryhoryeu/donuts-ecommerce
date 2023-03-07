@@ -74,28 +74,31 @@ export const Header: FC = () => {
 						<div
 							onClick={() => {
 								allActions.closeHeaderPopup()
+								router.push('/')
 							}}
 							className={`
 							${styles.header__nav__item}
 							${pathname === '/' ? styles.header__nav__item__active : undefined}
 							`}
 						>
-							<Link href='/'>About us</Link>
+							About us
 						</div>
 						<div
 							onClick={() => {
 								allActions.closeHeaderPopup()
+								router.push('/catalog')
 							}}
 							className={`
 							${pathname === '/catalog' ? styles.header__nav__item__active : undefined}
 							${styles.header__nav__item}
 							`}
 						>
-							<Link href='/catalog'>Catalog</Link>
+							Catalog
 						</div>
 						<div
 							onClick={() => {
 								allActions.closeHeaderPopup()
+								router.push('/bag')
 							}}
 							className={`
 							${styles.header__nav__item}
@@ -103,19 +106,20 @@ export const Header: FC = () => {
 							${pathname === '/bag' ? styles.header__nav__item__active : undefined}
 							`}
 						>
-							<Link href='/bag'>Bag</Link>
+							Bag
 							<div className={styles.header__nav__bag__counter}>3</div>
 						</div>
 						<div
 							onClick={() => {
 								allActions.closeHeaderPopup()
+								router.push('/contacts')
 							}}
 							className={`
 							${styles.header__nav__item}
 							${pathname === '/contacts' ? styles.header__nav__item__active : undefined}
 							`}
 						>
-							<Link href='/contacts'>Contacts</Link>
+							Contacts
 						</div>
 					</nav>
 					<div

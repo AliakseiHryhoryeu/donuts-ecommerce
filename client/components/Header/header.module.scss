@@ -72,6 +72,7 @@
 		padding: 10px 10px;
 		&:hover {
 			background: var(--color-primary-hover);
+			border-radius: 10px;
 		}
 		&__container {
 			// width: 100%;
@@ -124,12 +125,12 @@
 			font-size: 24px;
 			border-bottom: 2px solid transparent;
 
-			font-weight: 500;
-			a {
-				color: var(--color-primary);
-			}
+			color: var(--color-primary);
 			&__active {
 				border-bottom: 2px solid var(--color-secondary);
+			}
+			&:hover {
+				background: var(--color-primary-hover);
 			}
 		}
 
@@ -174,6 +175,9 @@
 			a {
 				font-size: 24px;
 				color: #000;
+				&:hover {
+					background: var(--color-primary-hover);
+				}
 			}
 			cursor: pointer;
 		}
@@ -186,7 +190,13 @@
 			svg {
 				height: 40px;
 				width: 40px;
+			}
+			a {
 				margin-left: 20px;
+
+				&:hover {
+					background: var(--color-primary-hover);
+				}
 			}
 		}
 	}
