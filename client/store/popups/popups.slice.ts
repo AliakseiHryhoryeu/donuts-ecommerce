@@ -12,6 +12,9 @@ export const popupsSlice = createSlice({
 	name: 'popupsSlice',
 	initialState,
 	reducers: {
+		closeHeaderPopup: (state) => {
+			state.headerPopup = false
+		},
 		toggleHeaderPopup: (state) => {
 			state.headerPopup = !state.headerPopup
 		},
@@ -21,7 +24,7 @@ export const popupsSlice = createSlice({
 		toggleQuestionsPopup: (state) => {
 			state.questionsPopup = !state.questionsPopup
 		},
-		closeAppPopups: (state) => {
+		closeAllPopups: (state) => {
 			state.headerPopup = false
 			state.bagPopup = false
 			state.questionsPopup = false

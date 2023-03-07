@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router'
 import React, { FC } from 'react'
 import ContainerMaxWidth from '../ContainerMaxWidth'
 import ContainerWrapper from '../ContainerWrapper'
@@ -9,6 +10,9 @@ import WhatsAppIcon from '../svg/WhatsAppIcon'
 import styles from './footer.module.scss'
 
 export const Footer: FC = () => {
+	const { pathname } = useRouter()
+	const router = useRouter()
+
 	return (
 		<>
 			<SpacerHorizontal text={'questions'} />
@@ -29,10 +33,42 @@ export const Footer: FC = () => {
 					>
 						<div className={styles.footer__menu_title}>Menu</div>
 						<div className={styles.footer__menu_wrapper}>
-							<p className={styles.footer__menu_active}>About us</p>
-							<p>Catalog</p>
-							<p>Your bag</p>
-							<p>Contacts</p>
+							<a
+								href='/'
+								className={`
+								${styles.footer__text}
+								${pathname === '/' ? styles.footer__menu_active : undefined}
+								`}
+							>
+								About us
+							</a>
+							<a
+								href='/catalog'
+								className={`
+								${styles.footer__text}
+								${pathname === '/catalog' ? styles.footer__menu_active : undefined}
+								`}
+							>
+								Catalog
+							</a>
+							<a
+								href='/bag'
+								className={`
+								${styles.footer__text}
+								${pathname === '/bag' ? styles.footer__menu_active : undefined}
+								`}
+							>
+								Your bag
+							</a>
+							<a
+								href='/contacts'
+								className={`
+								${styles.footer__text}
+								${pathname === '/contacts' ? styles.footer__menu_active : undefined}
+								`}
+							>
+								Contacts
+							</a>
 						</div>
 					</div>
 					<div className={styles.footer__other}>

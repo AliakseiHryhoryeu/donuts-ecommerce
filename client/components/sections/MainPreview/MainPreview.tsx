@@ -6,9 +6,9 @@ import styles from './mainPreview.module.scss'
 
 export const MainPreview: FC = () => {
 	return (
-		<ContainerMaxWidth className={styles.preview__fullContainer}>
-			<ContainerWrapper className={styles.preview__container}>
-				<div className={styles.preview__wrapper}>
+		<ContainerMaxWidth className={styles.preview__container}>
+			<ContainerWrapper className={styles.preview__wrapper}>
+				<div className={styles.preview__content}>
 					<div className={styles.preview__title}>
 						Find your <br />
 						favorite <span>donut</span>!

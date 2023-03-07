@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 import Head from 'next/head'
 
 import styles from '../styles/main.module.scss'
-import MainPreview from 'src/components/sections/MainPreview'
+import MainPreview from 'src/components/sections/MainPreview/MainPreview'
 import SpacerText from 'src/components/sections/SpacerText'
 import SpacerHorizontal from 'src/components/sections/SpacerHorizontal'
 import AboutTeam from 'src/components/sections/AboutTeam'

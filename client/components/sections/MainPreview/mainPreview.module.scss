@@ -1,22 +1,24 @@
 .preview {
-	&__fullContainer {
+	&__container {
 		min-height: 910px;
-		background-image: url('/static/MainPreview/bg.jpg');
+		background-image: url('/static/MainPreview/bgLarge.jpg');
 		background-repeat: no-repeat;
 		background-size: cover;
+		background-position: center center;
+		background-attachment: fixed;
 
 		display: flex;
 		flex-direction: row;
 		align-items: center;
-		justify-content: flex-end;
+		justify-content: center;
 	}
-	&__wrapper {
+	&__content {
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		flex-direction: column;
 	}
-	&__container {
+	&__wrapper {
 		display: flex;
 		flex-direction: row;
 		align-items: center;

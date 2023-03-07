@@ -4,9 +4,8 @@ import { useTypedSelector } from 'src/hooks/useTypedSelector'
 import { RootState } from 'src/store'
 import { useAuthMutation } from 'src/store/user/user.api'
 import Footer from '../Footer'
-import Header from '../Header'
+import Header from '../Header/Header'
 import BagPopup from '../Popups/BagPopup/BagPopup'
-import HeaderMenuPopup from '../Popups/HeaderMenuPopup/HeaderMenuPopup'
 import QuestionsPopup from '../Popups/QuestionsPopup/QuestionsPopup'
 
 // import { Header } from 'src/components/'
@@ -40,7 +39,6 @@ export const Layout: FC<ILayoutProps> = ({ children }) => {
 			{children}
 			<Footer />
 			{bagPopup && <BagPopup />}
-			{headerPopup && <HeaderMenuPopup />}
 			{questionsPopup && <QuestionsPopup />}
 		</>
 	)
