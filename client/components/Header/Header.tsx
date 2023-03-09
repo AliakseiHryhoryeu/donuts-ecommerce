@@ -24,13 +24,13 @@ export const Header: FC = () => {
 	})
 
 	// Disable body scroll when headerPopup Active
-	useEffect(() => {
-		if (headerPopup) {
-			document?.body.classList.add(styles.scrollLock)
-		} else {
-			document?.body.classList.remove(styles.scrollLock)
-		}
-	}, [headerPopup])
+	// useEffect(() => {
+	// 	if (headerPopup) {
+	// 		document?.body.classList.add(styles.scrollLock)
+	// 	} else {
+	// 		document?.body.classList.remove(styles.scrollLock)
+	// 	}
+	// }, [headerPopup])
 	const router = useRouter()
 	const allActions = useActions()
 	return (
