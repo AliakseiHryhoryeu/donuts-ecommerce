@@ -1,6 +1,6 @@
 :root {
 	/* Fonts */
-	--body-font: 'Inter', -apple-system, system-ui, sans-serif;
+	--body-font: 'Urbanist', -apple-system, system-ui, sans-serif;
 
 	/* Colors */
 	--color-white: #ffffff;
@@ -10,90 +10,39 @@
 	/* End Dark Projects styles */
 
 	/* Fonts */ // for 1440px
-	--Fonts-h1: 65px; // big titles
-	--Fonts-h2: 46px; // small titles
-	--Fonts-h3: 24px; // Big text
-	--Fonts-h4: 20px; // normal text
-	--Fonts-h5: 18px; // Big description
-	--Fonts-h6: 14px; // description
+	--Fonts-big: 96px; // Hrizontal Spacers
+	--Fonts-h1: 72px; // small titles
+	--Fonts-h2: 36px; // Big text
+	--Fonts-h3: 28px; // normal text
+	--Fonts-h4: 24px; // Big description
+	// --Fonts-h6: 14px; // description
 
-	@media screen and (max-width: 1024px) {
-		--Fonts-h1: 52px; // big titles
-		// --Fonts-h2: 46px; // small titles
-		// --Fonts-h3: 24px; // Big text
-		// --Fonts-h4: 20px; // normal text
-		// --Fonts-h5: 16px; // Big description
-		// --Fonts-h6: 14px; // description
+	@media screen and (max-width: 1280px) {
+		--Fonts-big: 64px; // Hrizontal Spacers
+		--Fonts-h1: 52px; // small titles
+		--Fonts-h2: 28px; // Big text
+		--Fonts-h3: 24px; // normal text
+		--Fonts-h4: 20px; // Big description
 	}
-	@media screen and (max-width: 768px) {
-		--Fonts-h1: 45px; // big titles
-		// --Fonts-h2: 46px; // small titles
-		// --Fonts-h3: 22px; // Big text
-		--Fonts-h4: 18px; // normal text
-		// --Fonts-h5: 16px; // Big description
-		// --Fonts-h6: 14px; // description
-	}
+	// @media screen and (max-width: 768px) {
+	// 	--Fonts-big: 96px; // Hrizontal Spacers
+	// 	--Fonts-h1: 72px; // small titles
+	// 	--Fonts-h2: 36px; // Big text
+	// 	--Fonts-h3: 28px; // normal text
+	// 	--Fonts-h4: 24px; // Big description
+	// }
 
-	@media screen and (max-width: 600px) {
-		--Fonts-h1: 35px; // big titles
-		// --Fonts-h2: 46px; // small titles
-		--Fonts-h3: 22px; // Big text
-		--Fonts-h4: 16px; // normal text
-		// --Fonts-h5: 16px; // Big description
-		// --Fonts-h6: 14px; // description
-	}
-	@media screen and (max-width: 470px) {
-		// --Fonts-h1: 35px; // big titles
-		// --Fonts-h2: 46px; // small titles
-		--Fonts-h3: 18px; // Big text
-		--Fonts-h4: 15px; // normal text
-		--Fonts-h5: 16px; // Big description
-		// --Fonts-h6: 14px; // description
-	}
-	@media screen and (max-width: 370px) {
-		--Fonts-h1: 30px; // big titles
-		// --Fonts-h2: 46px; // small titles
-		--Fonts-h3: 16px; // Big text
-		--Fonts-h4: 12px; // normal text
-		// --Fonts-h5: 16px; // Big description
-		// --Fonts-h6: 14px; // description
-	}
-	@media screen and (max-width: 340px) {
-		--Fonts-h1: 30px; // big titles
-		// --Fonts-h2: 46px; // small titles
-		--Fonts-h3: 16px; // Big text
-		--Fonts-h4: 12px; // normal text
-		// --Fonts-h5: 16px; // Big description
-		--Fonts-h6: 12px; // description
+	@media screen and (max-width: 400px) {
+		--Fonts-big: 40px; // Hrizontal Spacers
+		--Fonts-h1: 36px; // small titles
+		--Fonts-h2: 24px; // Big text
+		--Fonts-h3: 20px; // normal text
+		--Fonts-h4: 16px; // Big description
 	}
 
 	/* Wrapper */
 	--wrapper_width: 1440px;
 	@media screen and (max-width: 1440px) {
 		--wrapper_width: 1180px;
-	}
-	@media screen and (max-width: 1200px) {
-		--wrapper_width: 980px;
-	}
-	@media screen and (max-width: 1000px) {
-		--wrapper_width: 780px;
-	}
-	@media screen and (max-width: 800px) {
-		--wrapper_width: 680px;
-	}
-	@media screen and (max-width: 700px) {
-		--wrapper_width: 590px;
-	}
-	@media screen and (max-width: 600px) {
-		--wrapper_width: 490px;
-	}
-	@media screen and (max-width: 500px) {
-		--wrapper_width: 390px;
-	}
-	@media screen and (max-width: 400px) {
-		--wrapper_width: 380px;
-	}
-	@media screen and (max-width: 380px) {
-		--wrapper_width: 360px;
 	}
 }

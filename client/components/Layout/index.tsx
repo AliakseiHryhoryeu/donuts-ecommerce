@@ -5,7 +5,6 @@ import { RootState } from 'src/store'
 import { useAuthMutation } from 'src/store/user/user.api'
 import Footer from '../Footer'
 import Header from '../Header/Header'
-import BagPopup from '../Popups/BagPopup/BagPopup'
 import QuestionsPopup from '../Popups/QuestionsPopup/QuestionsPopup'
 
 // import { Header } from 'src/components/'
@@ -38,7 +37,6 @@ export const Layout: FC<ILayoutProps> = ({ children }) => {
 			<Header />
 			{children}
 			<Footer />
-			{bagPopup && <BagPopup />}
 			{questionsPopup && <QuestionsPopup />}
 		</>
 	)
