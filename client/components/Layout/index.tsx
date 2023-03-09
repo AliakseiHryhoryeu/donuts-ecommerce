@@ -3,7 +3,7 @@ import { useActions } from 'src/hooks/useActions'
 import { useTypedSelector } from 'src/hooks/useTypedSelector'
 import { RootState } from 'src/store'
 import { useAuthMutation } from 'src/store/user/user.api'
-import Footer from '../Footer'
+import Footer from '../Footer/Footer'
 import Header from '../Header/Header'
 import QuestionsPopup from '../Popups/QuestionsPopup/QuestionsPopup'
 

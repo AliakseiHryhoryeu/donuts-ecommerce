@@ -3,8 +3,9 @@ import ContainerMaxWidth from 'src/components/ContainerMaxWidth'
 import ContainerWrapper from 'src/components/ContainerWrapper'
 
 import styles from './best.module.scss'
+import BestSlider from './BestSlider'
 
-export const AboutTeam: FC = () => {
+export const Best: FC = () => {
 	const slides = [
 		{ id: 0, image: 'static/Best/best-photo-slide.png' },
 		{ id: 1, image: 'static/Best/best-photo-slide.png' },
@@ -40,7 +41,7 @@ export const AboutTeam: FC = () => {
 	}, [currentSlideId, nextSlide])
 
 	return (
-		<ContainerMaxWidth className={styles.best__fullContainer}>
+		<ContainerMaxWidth className={styles.best__container}>
 			<img
 				src='static/Best/best-bg-1.svg'
 				className={styles.best__bg_top}
@@ -51,80 +52,40 @@ export const AboutTeam: FC = () => {
 				className={styles.best__bg_bottom}
 				alt=''
 			/>
-			<ContainerWrapper className={styles.best__container}>
+			<ContainerWrapper className={styles.best__wrapper}>
 				<div className={styles.best__left}>
-					<p>
+					<p
+						className={`${styles.best__paragraph} ${styles.best__paragraph__border1px}`}
+					>
 						the best in <br />
 						the business
 					</p>
-					<p>
+					<p className={`${styles.best__paragraph}`}>
 						the best in <br />
 						the business
 					</p>
-					<p className={styles.best__left_active}>
+					<p
+						className={`${styles.best__paragraph__active} ${styles.best__paragraph}`}
+					>
 						the best in <br />
 						the business
 					</p>
 
-					<p>
+					<p className={`${styles.best__paragraph}`}>
 						the best in <br />
 						the business
 					</p>
-					<p>
-						the best in <br />
-						the business
-					</p>
-					<p>
-						the best in <br />
-						the business
-					</p>
-					<p>
+					<p
+						className={`${styles.best__paragraph} ${styles.best__paragraph__border1px}`}
+					>
 						the best in <br />
 						the business
 					</p>
 				</div>
-				<div className={styles.best__right}>
-					<div>
-						{slides &&
-							slides.map((slide) => {
-								return (
-									<img
-										key={slide.id}
-										className={`${
-											slide.id == currentSlideId
-												? styles.best__slides_item_active
-												: styles.best__slides_item
-										} `}
-										src='static/Best/best-photo-slide.png'
-										alt='photo'
-									/>
-								)
-							})}
-					</div>
-					<div className={styles.best__slides__btnContainer}>
-						{slides &&
-							slides.map((slide) => {
-								return (
-									<div
-										key={slide.id}
-										onClick={() => {
-											setCurrentSlideId(slide.id)
-										}}
-										className={`
-										${styles.best__slides_btn}
-										${
-											slide.id == currentSlideId
-												? styles.best__slides_btn_active
-												: styles.best__slides_btn
-										} `}
-									></div>
-								)
-							})}
-					</div>
-				</div>
+				<BestSlider />
 			</ContainerWrapper>
 		</ContainerMaxWidth>
 	)
 }
 
-export default AboutTeam
+export default Best

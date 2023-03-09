@@ -6,7 +6,7 @@ import MainPreview from 'src/components/sections/MainPreview/MainPreview'
 import SpacerHorizontal from 'src/components/sections/SpacerHorizontal'
 import AboutTeam from 'src/components/sections/AboutTeam/AboutTeam'
 import GiftboxPreview from 'src/components/sections/GiftboxPreview/GiftboxPreview'
-import Best from 'src/components/sections/Best'
+import Best from 'src/components/sections/Best/Best'
 import CatalogPreview from 'src/components/sections/CatalogPreview/CatalogPreview'
 
 const Home: FC = () => (
