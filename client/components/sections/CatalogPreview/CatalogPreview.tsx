@@ -2,16 +2,16 @@ import { useRouter } from 'next/router'
 import React, { FC } from 'react'
 import ContainerMaxWidth from 'src/components/ContainerMaxWidth'
 import ContainerWrapper from 'src/components/ContainerWrapper'
-import Donut from 'src/components/Donut'
+import Donut from 'src/components/Donut/Donut'
 import CircleIcon from 'src/components/svg/CircleIcon'
 
-import styles from './donuts.module.scss'
+import styles from './catalogPreview.module.scss'
 
-export const Donuts: FC = () => {
+export const CatalogPreview: FC = () => {
 	const router = useRouter()
 	return (
-		<ContainerMaxWidth className={styles.donuts__container}>
-			<ContainerWrapper className={styles.donuts__wrapper}>
+		<ContainerMaxWidth className={styles.catalogPreview__container}>
+			<ContainerWrapper className={styles.catalogPreview__wrapper}>
 				<Donut />
 				<Donut />
 				<Donut />
@@ -20,7 +20,7 @@ export const Donuts: FC = () => {
 				<Donut />
 			</ContainerWrapper>
 			<div
-				className={styles.donuts__button}
+				className={styles.catalogPreview__button}
 				onClick={() => {
 					router.push('/catalog')
 				}}
@@ -32,4 +32,4 @@ export const Donuts: FC = () => {
 	)
 }
 
-export default Donuts
+export default CatalogPreview

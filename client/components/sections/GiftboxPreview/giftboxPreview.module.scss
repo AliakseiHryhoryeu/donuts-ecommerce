@@ -1,0 +1,129 @@
+.giftboxPreview {
+	&__container {
+		margin-top: 150px;
+
+		background-image: url('/static/GiftboxPreview/bgLarge.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+		background-attachment: fixed;
+	}
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		flex-direction: row;
+		justify-content: center;
+
+		border-radius: 20px;
+		background-color: rgba(255, 255, 255, 1);
+		padding: 50px;
+		width: auto;
+		margin: 50px 0px;
+	}
+	&__leftSection {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: space-between;
+		height: 100%;
+		margin-right: 5px;
+	}
+	&__rightSection {
+		img {
+			height: 300px;
+			width: 350px;
+		}
+	}
+	&__title {
+		font-weight: 700;
+		font-size: var(--fonts-h2);
+		text-transform: uppercase;
+		color: var(--color-secondary);
+		margin-bottom: 35px;
+	}
+	&__description {
+		max-width: 400px;
+		font-weight: 400;
+		margin-bottom: 50px;
+		font-size: var(--fonts-h4);
+		color: var(--color-primary);
+	}
+	&__button {
+		padding: 13px 30px;
+		border-radius: 20px;
+		color: #fff;
+		cursor: pointer;
+		font-weight: 600;
+		font-size: var(--fonts-h4);
+		border: 1px solid #fff;
+		background-color: var(--color-secondary);
+		box-shadow: 4px 4px 10px rgba(125, 116, 160, 0.35);
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.giftboxPreview {
+		&__wrapper {
+			margin: 30px 0px;
+
+			img {
+				max-width: 300px;
+				height: 260px;
+			}
+		}
+		&__rightSection {
+			img {
+				height: 300px;
+				width: 350px;
+			}
+		}
+		&__title {
+			margin-bottom: 25px;
+		}
+		&__description {
+			margin-bottom: 40px;
+		}
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.giftboxPreview {
+		&__wrapper {
+			display: flex;
+			flex-direction: column;
+		}
+		&__rightSection {
+			margin-top: 30px;
+		}
+	}
+}
+@media screen and (max-width: 700px) {
+	.giftboxPreview {
+		&__wrapper {
+			padding: 40px;
+		}
+		&__description {
+			max-width: 270px;
+		}
+		&__rightSection {
+			img {
+				height: 200px;
+				width: 300px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.giftboxPreview {
+		&__wrapper {
+			padding: 30px;
+		}
+		&__rightSection {
+			img {
+				height: 170px;
+				width: 270px;
+			}
+		}
+	}
+}

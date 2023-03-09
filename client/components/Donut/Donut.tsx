@@ -5,6 +5,7 @@ import PlusIcon from 'src/components/svg/PlusIcon'
 import styles from './donut.module.scss'
 
 interface DonutProps {
+	id: string
 	title: string
 	price: number
 	description: string
@@ -24,12 +25,16 @@ export const Donut: FC = () => {
 	}
 
 	return (
-		<div className={styles.donuts__product}>
-			<img src='static/products/donut-1.png' alt='product-img' />
-			<div className={styles.donuts__title}>Sweet life</div>
-			<div className={styles.donuts__price}>2.99$</div>
-			<div className={styles.donuts__text}>
-				Feel the taste of summer: wonderful dough with strawberry filling
+		<div className={styles.donuts__container}>
+			<div className={styles.donuts__description__container}>
+				<img src='static/products/donut-1.png' alt='product-img' />
+				<div className={styles.donuts__description__wrapper}>
+					<div className={styles.donuts__title}>Sweet life</div>
+					<div className={styles.donuts__price}>2.99$</div>
+					<div className={styles.donuts__text}>
+						Feel the taste of summer: wonderful dough with strawberry filling
+					</div>
+				</div>
 			</div>
 			<div className={styles.donuts__row}>
 				<div className={styles.donuts__counter}>
@@ -50,7 +55,7 @@ export const Donut: FC = () => {
 					</div>
 				</div>
 				<div tabIndex={1} className={styles.donuts__row_btn}>
-					Add to bag
+					<span> Add to bag</span>
 				</div>
 			</div>
 		</div>

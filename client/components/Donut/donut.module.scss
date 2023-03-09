@@ -1,16 +1,34 @@
 .donuts {
-	&__product {
+	&__container {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		padding: 20px;
 		max-width: 390px;
+		width: 100%;
+		img {
+			height: 250px;
+			width: 250px;
+		}
+	}
+	&__description {
+		&__container {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+		}
+		&__wrapper {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+		}
 	}
 	&__title {
 		color: var(--color-secondary);
-		font-size: 36px;
-		line-height: 43px;
+		font-size: var(--fonts-h2);
+		// line-height: 43px;
 		font-weight: 700;
 		text-transform: uppercase;
 		margin-top: 30px;
@@ -19,13 +37,14 @@
 	}
 	&__price {
 		font-weight: 500;
-		font-size: 28px;
+		font-size: var(--fonts-h3);
 		margin-bottom: 10px;
 		color: var(--color-secondary);
 		text-align: center;
 	}
 	&__text {
-		font-size: 24px;
+		font-size: var(--fonts-h4);
+		color: var(--color-primary);
 		font-weight: 400;
 		text-align: center;
 		margin-bottom: 20px;
@@ -46,16 +65,24 @@
 			width: 100%;
 			padding: 13px 0px;
 			background: var(--color-secondary);
-			border: 1px solid #fff;
-			color: #fff;
-			font-size: 24px;
-			font-weight: 600;
+			border: 1px solid var(--color-white);
 			cursor: pointer;
 			box-shadow: 4px 4px 10px rgba(125, 116, 160, 0.35);
+			margin-right: 12px;
+			margin-left: 20px;
+			span,
+			&::after {
+				color: var(--color-white);
+				font-size: var(--fonts-h4);
+				font-weight: 600;
+			}
 			&:hover {
-				background: #fff;
-				border: 1px solid #ff7297;
-				color: #000;
+				background: var(--color-white);
+				border: 1px solid var(--color-secondary);
+				span,
+				&::after {
+					color: var(--color-primary);
+				}
 			}
 		}
 	}
@@ -65,9 +92,10 @@
 		justify-content: space-between;
 		align-items: center;
 		min-width: 70px;
+		padding-left: 12px;
 		p {
-			padding: 0px 7px;
-			font-size: 28px;
+			padding: 0px 6px;
+			font-size: var(--fonts-h3);
 			align-items: center;
 		}
 		div {
@@ -78,15 +106,109 @@
 
 		svg {
 			cursor: pointer;
-			padding: 10px;
+			padding: 8px;
 			&:hover {
 				path {
-					stroke: #ff7297;
+					stroke: var(--color-secondary);
 				}
 				circle {
-					stroke: #ff7297;
+					stroke: var(--color-secondary);
 				}
 			}
+		}
+	}
+}
+
+@media (max-width: 1400px) {
+	.donuts {
+		&__container {
+			max-width: 310px;
+			img {
+				height: 210px;
+				width: 210px;
+			}
+		}
+		&__counter {
+			padding-left: 0px;
+			p {
+				padding: 0px 4px;
+			}
+			svg {
+				padding: 5px;
+			}
+		}
+		&__row_btn {
+			margin-right: 0;
+			max-width: 158;
+		}
+	}
+}
+
+@media (max-width: 1000px) {
+	.donuts__row_btn {
+		span {
+			display: none;
+		}
+		&::after {
+			content: 'Add';
+		}
+		max-width: 98px;
+	}
+}
+
+@media (max-width: 800px) {
+	.donuts__row_btn {
+		&::after {
+			content: 'Add to bag';
+		}
+		max-width: 198px;
+	}
+}
+@media (max-width: 680px) {
+	.donuts__row_btn {
+		&::after {
+			content: 'Add';
+		}
+		max-width: 98px;
+	}
+}
+
+@media (max-width: 550px) {
+	.donuts {
+		&__container {
+			max-width: none;
+			width: 90%;
+			img {
+				width: 120px;
+				height: 120px;
+				margin-right: 20px;
+			}
+		}
+		&__description {
+			&__container {
+				flex-direction: row;
+				justify-content: flex-start;
+				width: 100%;
+			}
+			&__wrapper {
+				flex-direction: column;
+				justify-content: flex-start;
+				align-items: flex-start;
+			}
+		}
+		&__text {
+			text-align: start;
+			color: var(--color-grey);
+			margin-bottom: 10px;
+		}
+		&__title {
+			font-weight: 600;
+			margin-top: 0;
+			margin-bottom: 5px;
+		}
+		&__price {
+			font-weight: 400;
+			margin-bottom: 5px;
 		}
 	}
 }

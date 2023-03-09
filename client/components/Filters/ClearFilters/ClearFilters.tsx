@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import Donut from 'src/components/Donut'
+import Donut from 'src/components/Donut/Donut'
 import CrossIcon from '../../svg/CrossIcon'
 
 import styles from './clearFilters.module.scss'

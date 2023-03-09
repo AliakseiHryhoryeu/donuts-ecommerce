@@ -1,5 +1,5 @@
 import React, { FC, useState } from 'react'
-import Donut from 'src/components/Donut'
+import Donut from 'src/components/Donut/Donut'
 import ArrowBottom from 'src/components/svg/ArrowBottom'
 
 import styles from './checkboxDonut.module.scss'

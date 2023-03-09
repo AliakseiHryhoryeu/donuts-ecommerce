@@ -1,4 +1,4 @@
-.donuts {
+.catalogPreview {
 	&__container {
 		display: flex;
 		justify-content: center;
@@ -9,6 +9,9 @@
 		margin-top: 100px;
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
+		row-gap: 50px;
+		column-gap: 40px;
+		justify-items: center;
 	}
 	&__button {
 		display: flex;
@@ -24,6 +27,11 @@
 		p {
 			margin-right: 9px;
 		}
+		&:hover {
+			background-color: var(--color-primary-hover);
+			border-radius: 10px;
+		}
+		padding: 20px;
 	}
 	&__spacer {
 		display: flex;
@@ -42,6 +50,30 @@
 			text-transform: uppercase;
 			color: transparent;
 			-webkit-text-stroke: 3px var(--color-secondary);
+		}
+	}
+}
+@media (max-width: 1200px) {
+	.catalogPreview {
+		&__wrapper {
+			row-gap: 50px;
+			column-gap: 40px;
+		}
+	}
+}
+@media (max-width: 800px) {
+	.catalogPreview {
+		&__wrapper {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+}
+
+@media (max-width: 550px) {
+	.catalogPreview {
+		&__wrapper {
+			grid-template-columns: 1fr;
+			row-gap: 10px;
 		}
 	}
 }

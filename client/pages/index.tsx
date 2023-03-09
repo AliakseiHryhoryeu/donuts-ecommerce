@@ -5,9 +5,9 @@ import styles from '../styles/main.module.scss'
 import MainPreview from 'src/components/sections/MainPreview/MainPreview'
 import SpacerHorizontal from 'src/components/sections/SpacerHorizontal'
 import AboutTeam from 'src/components/sections/AboutTeam/AboutTeam'
-import { Collect } from 'src/components/sections/Collect'
+import GiftboxPreview from 'src/components/sections/GiftboxPreview/GiftboxPreview'
 import Best from 'src/components/sections/Best'
-import Donuts from 'src/components/sections/Donuts'
+import CatalogPreview from 'src/components/sections/CatalogPreview/CatalogPreview'
 
 const Home: FC = () => (
 	<>
@@ -19,8 +19,8 @@ const Home: FC = () => (
 			<SpacerHorizontal text={'our team'} />
 			<AboutTeam />
 			<SpacerHorizontal text={'donuts'} />
-			<Donuts />
-			<Collect />
+			<CatalogPreview />
+			<GiftboxPreview />
 			<Best />
 		</main>
 	</>

@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import ContainerMaxWidth from 'src/components/ContainerMaxWidth'
 import ContainerWrapper from 'src/components/ContainerWrapper'
-import Donut from 'src/components/Donut'
+import Donut from 'src/components/Donut/Donut'
 import ClearFilters from 'src/components/Filters/ClearFilters/ClearFilters'
 import ColorFilter from 'src/components/Filters/ColorFilter'
 import DefaultFilter from 'src/components/Filters/DefaultFilter'
