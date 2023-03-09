@@ -10,34 +10,34 @@
 	/* End Dark Projects styles */
 
 	/* Fonts */ // for 1440px
-	--Fonts-big: 96px; // Hrizontal Spacers
-	--Fonts-h1: 72px; // small titles
-	--Fonts-h2: 36px; // Big text
-	--Fonts-h3: 28px; // normal text
-	--Fonts-h4: 24px; // Big description
-	// --Fonts-h6: 14px; // description
+	--fonts-big: 96px; // Hrizontal Spacers
+	--fonts-h1: 72px; // small titles
+	--fonts-h2: 36px; // Big text
+	--fonts-h3: 28px; // normal text
+	--fonts-h4: 24px; // Big description
+	// --fonts-h6: 14px; // description
 
 	@media screen and (max-width: 1280px) {
-		--Fonts-big: 64px; // Hrizontal Spacers
-		--Fonts-h1: 52px; // small titles
-		--Fonts-h2: 28px; // Big text
-		--Fonts-h3: 24px; // normal text
-		--Fonts-h4: 20px; // Big description
+		--fonts-big: 64px; // Hrizontal Spacers
+		--fonts-h1: 52px; // small titles
+		--fonts-h2: 28px; // Big text
+		--fonts-h3: 24px; // normal text
+		--fonts-h4: 20px; // Big description
 	}
-	// @media screen and (max-width: 768px) {
-	// 	--Fonts-big: 96px; // Hrizontal Spacers
-	// 	--Fonts-h1: 72px; // small titles
-	// 	--Fonts-h2: 36px; // Big text
-	// 	--Fonts-h3: 28px; // normal text
-	// 	--Fonts-h4: 24px; // Big description
-	// }
+	@media screen and (max-width: 950px) {
+		// --fonts-big: 96px; // Hrizontal Spacers
+		--fonts-h1: 40px; // small titles
+		--fonts-h2: 26px; // Big text
+		--fonts-h3: 28px; // normal text
+		--fonts-h4: 18px; // Big description
+	}
 
 	@media screen and (max-width: 400px) {
-		--Fonts-big: 40px; // Hrizontal Spacers
-		--Fonts-h1: 36px; // small titles
-		--Fonts-h2: 24px; // Big text
-		--Fonts-h3: 20px; // normal text
-		--Fonts-h4: 16px; // Big description
+		--fonts-big: 40px; // Hrizontal Spacers
+		--fonts-h1: 36px; // small titles
+		--fonts-h2: 24px; // Big text
+		--fonts-h3: 20px; // normal text
+		--fonts-h4: 16px; // Big description
 	}
 
 	/* Wrapper */

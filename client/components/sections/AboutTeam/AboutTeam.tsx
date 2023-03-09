@@ -6,7 +6,7 @@ import styles from './aboutTeam.module.scss'
 
 export const AboutTeam: FC = () => {
 	return (
-		<ContainerMaxWidth className={styles.team__fullContainer}>
+		<ContainerMaxWidth className={styles.team__container}>
 			<ContainerWrapper>
 				<div className={styles.team__wrapper}>
 					<div className={styles.team__text}>
@@ -31,9 +31,25 @@ export const AboutTeam: FC = () => {
 							A person in a team learns to show empathy, develops emotional
 							intelligence, learns to listen, respect, and understand others.
 						</p>
-						<div className={styles.team__button}>find out more</div>
+						<a
+							target='_blank'
+							href='https://www.instagram.com/'
+							className={styles.team__button}
+							rel='noreferrer'
+						>
+							find out more
+						</a>
 					</div>
-					<img src='/static/AboutTeam/team_photos.png' alt='team-photos' />
+					<img
+						className={styles.team__photos__pc}
+						src='/static/AboutTeam/team_photos.png'
+						alt='team-photos'
+					/>
+					<img
+						className={styles.team__photos__mobile}
+						src='/static/AboutTeam/team_photos_Mobile.png'
+						alt='team-photos'
+					/>
 				</div>
 			</ContainerWrapper>
 
